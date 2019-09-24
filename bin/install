@@ -97,7 +97,7 @@ get_current_variant() {
 get_base_url() {
 	local distro=$1
 	case $distro in
-		oracle) echo "http://download.oracle.com/otn-pub/java/jdk/" ;;
+		oracle) echo "https://download.oracle.com/otn/java/jdk/" ;;
 		openjdk) echo "https://download.java.net/java/GA/jdk" ;;
 		*) ;;
 	esac
@@ -112,7 +112,6 @@ get_java() {
 
 	local base=$(get_base_url $distro)
 	local oracle8_version=$(echo $version | sed -e 's|\.|u|g')
-
 	case $distro-$version in
 		oracle-11.0.4) url=$base$version+10/cf1bbcbf431a474eb9fc550051f4ee78/jdk-$version'_'$(get_current_variant $variant) ;;
 		oracle-8.202)  url=$base$oracle8_version-b08/1961070e4c9b4e26a04e7f5a083f551e/jdk-$oracle8_version-$variant ;;
