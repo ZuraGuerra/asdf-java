@@ -114,7 +114,7 @@ get_java() {
 	local oracle8_version=$(echo $version | sed -e 's|\.|u|g')
 
 	case $distro-$version in
-		oracle-11.0.1) url=$base$version+13/90cf5d8f270a4347a95050320eef3fb7/jdk-$version'_'$(get_current_variant $variant) ;;
+		oracle-11.0.4) url=$base$version+10/cf1bbcbf431a474eb9fc550051f4ee78/jdk-$version'_'$(get_current_variant $variant) ;;
 		oracle-8.202)  url=$base$oracle8_version-b08/1961070e4c9b4e26a04e7f5a083f551e/jdk-$oracle8_version-$variant ;;
 		oracle-8.201)  url=$base$oracle8_version-b09/42970487e3af4f5aa5bca3f542482c60/jdk-$oracle8_version-$variant ;;
 		oracle-8.191)  url=$base$oracle8_version-b12/2787e4a523244c269598db4e85c51e0c/jdk-$oracle8_version-$variant ;;
